@@ -17,6 +17,15 @@ public class OrderServiceStep {
                 .log().all()
                 .extract().response();
 
-        return response.as(Order.class);
+        Order responseOrden = response.as(Order.class);
+        responseOrden.setStatusCode(response.getStatusCode());
+
+        System.out.println("OUT: " + responseOrden.getId());
+        System.out.println("OUT: " + responseOrden.getPetId());
+        System.out.println("OUT: " + responseOrden.getStatus());
+        System.out.println("OUT: " + responseOrden.isComplete());
+        System.out.println("OUT: " + responseOrden.getStatusCode());
+
+        return responseOrden;
     }
 }

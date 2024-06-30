@@ -7,6 +7,7 @@ public class Order {
     private String shipDate;
     private String status;
     private boolean complete;
+    private int statusCode; // Añade este campo
 
     // Getters y setters
     public int getId() {
@@ -55,5 +56,13 @@ public class Order {
 
     public void setComplete(boolean complete) {
         this.complete = complete;
+    }
+
+    public int getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
     }
 }

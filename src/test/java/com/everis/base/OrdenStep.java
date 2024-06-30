@@ -34,6 +34,7 @@ public class OrdenStep {
         System.out.println("OUT: " + responseOrden.getPetId());
         System.out.println("OUT: " + responseOrden.getStatus());
         System.out.println("OUT: " + responseOrden.isComplete());
+        System.out.println("OUT: " + responseOrden.getStatusCode());
 
         return responseOrden;
     }
