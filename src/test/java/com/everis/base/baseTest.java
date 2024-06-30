@@ -11,11 +11,10 @@ import org.openqa.selenium.chrome.ChromeDriverService;
  * @author jovallep
  */
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features",
-        glue = "com.everis.base",
-        //tags = "@OrdenTienda", // => Se puede especificar qué Ejecutar
-         tags = "@ConsultaOrden",
+@CucumberOptions(features = {"src/test/resources/features/OrdenCompras.feature","src/test/resources/features/ConsultarOrden.feature"},
+        glue = {"com.everis.base"},
         strict = true)
+
 public class baseTest {
 
     public static String ANSI_GREEN = "\u001B[32m";
